@@ -1,0 +1,23 @@
+var monhoc = document.querySelectorAll('fieldset tr td:nth-child(2)');
+var tinchi = document.querySelectorAll('fieldset table tr td:nth-child(3)');
+var diem = document.querySelectorAll('fieldset table tr td:nth-child(6)');
+var tongdiem = 0;
+var diemtb = 0;
+var tongsotc = 0;
+for( var i = 0; i<monhoc.length; i++)
+{
+    if(monhoc[i].innerText.includes("Anh văn") || monhoc[i].innerText.includes("quốc phòng") || monhoc[i].innerText.includes("Thể dục") || parseFloat(diem[i].innerText) < 5)
+        continue;
+    else 
+    {   
+        console.log(monhoc[i].innerText);
+        console.log(diem[i].innerText);
+        console.log(tinchi[i].innerText);
+        tongdiem += parseFloat(diem[i].innerText)*parseInt(tinchi[i].innerText);
+        tongsotc += parseInt(tinchi[i].innerText);
+    }
+}
+console.log("Tong diem: " + tongdiem);
+console.log("Tong so tin chi: " + tongsotc);
+console.log("Diem trung binh: " + tongdiem/tongsotc);
+alert("Diem trung binh: " + tongdiem/tongsotc);
