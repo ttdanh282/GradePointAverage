@@ -6,7 +6,7 @@ var diemtb = 0;
 var tongsotc = 0;
 for( var i = 0; i<monhoc.length; i++)
 {
-    if(monhoc[i].innerText.includes("Anh văn") || monhoc[i].innerText.includes("quốc phòng") || monhoc[i].innerText.includes("Thể dục") || parseFloat(diem[i].innerText) < 5)
+    if(monhoc[i].innerText.includes("Anh văn") || monhoc[i].innerText.includes("quốc phòng") || monhoc[i].innerText.includes("Thể dục") || parseFloat(diem[i].innerText) < 5 || diem[i].innerText == "" )
         continue;
     else 
     {   
